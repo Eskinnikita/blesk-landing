@@ -17,11 +17,27 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: "Akrobat-Bold", sans-serif;
   color: #5c5c5c;
   background: url(../img/header-background.png);
+}
+
+#toTop {
+  left: 50px;
+  bottom: 50px;
+  z-index: 10000;
+  position: fixed;
+  border: 6px solid #c22328;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -395,6 +411,68 @@ body {
   color: #599ee0;
 }
 
+.modal-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.modal__main-title {
+  font-family: "Akrobat-Bold", sans-serif;
+  font-weight: 800;
+  color: #599ee0;
+}
+
+.modal__sub-title {
+  color: #c22328;
+  font-weight: 100;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal form input {
+  position: relative;
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #599ee0;
+  width: 60%;
+  margin: 10px auto 10px auto;
+}
+
+.closeButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -10px;
+  top: -10px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: #c22328;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 40px;
+  height: 40px;
+}
+
+.form__button {
+  background: #c22328;
+  color: #fff;
+  margin: 10px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 25px;
+  padding: 5px 10px;
+}
+
+.input__img img {
+  width: 40px;
+  padding-top: 10px;
+}
+
 @media (max-width: 767.98px) {
   section {
     padding: 25px 15px !important;
@@ -463,7 +541,7 @@ body {
   .sec__intro .title {
     background: #599ee0;
     color: #fff !important;
-    padding: 10px 0;
+    padding: 10px;
   }
   .sec__tech .title span {
     color: #599ee0
@@ -503,9 +581,22 @@ body {
     padding: 10px !important;
     font-size: 25px !important;
   }
-
   .btn_cl img {
     width: 40px;
+  }
+  .type img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .adv__item img {
+    height: 100px !important;
+  }
+  .sec__intro .title {
+    padding: 10px 0;
+  }
+  .input__img img {
+    width: 30px;
+    padding-top: 15px;
   }
 }
 
@@ -513,10 +604,48 @@ body {
   .title__text {
     font-size: 30px;
   }
-
   .btn_cl {
     padding: 20px;
     font-size: 30px;
+  }
+  #toTop {
+    left: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+  }
+  .type h2 {
+    font-size: 25px;
+  }
+  .type p {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .type img {
+    width: 150px;
+    height: 150px;
+  }
+  .adv__item {
+    margin-bottom: 20px;
+  }
+  .adv__item p {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .adv__item img {
+    height: 140px;
+  }
+  .circle {
+    height: 110px;
+    width: 110px;
+    font-size: 40px;
+  }
+  .sec__calc p {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .modal__main-title, .modal__sub-title{
+    font-size: 25px;
   }
 }
 
