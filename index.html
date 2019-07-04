@@ -5,30 +5,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="yandex-verification" content="b273d455a550b9e0" />
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-  <script src="/bootstrap/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
   <script src="/js/main.js"></script>
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(54260959, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+
+  </script>
+  <script src="//code.jivosite.com/widget.js" jv-id="r4A76yU2EE" async></script>
   <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
   <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <title>Наружная реклама. Объемные буквы. Заказать объемные буквы Москва</title>
 </head>
 
 <body>
-  <button id="toTop" onclick="toTop()">
+  <button id="toTop">
     <img src="/img/pointing-up-arrow.png" width="45" alt="вверх">
   </button>
-  <div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="offerModal"
-    aria-hidden="true">
+  <div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="offerModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <button class="closeButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -40,21 +56,21 @@
             ОСТАВЬТЕ ВАШИ ДАННЫЕ
           </h3>
           <h3 class="modal__sub-title">И МЫ ВАМ ПЕРЕЗВОНИМ</h3>
-          <form action="POST">
+          <form>
             <div class="row justify-content-center input_name">
               <div class="input__img col-1">
                 <img src="/img/icons/formName.png" alt="">
               </div>
-              <input class="col-9" type="text" placeholder="ИМЯ">
+              <input name="name" id="request_name" class="col-9" type="text" placeholder="ИМЯ">
             </div>
             <div class="row justify-content-center input_name">
-                <div class="input__img col-1">
-                  <img src="/img/icons/formPhone.png" alt="">
-                </div>
-                <input class="col-9" type="text" placeholder="ВАШ ТЕЛЕФОН">
+              <div class="input__img col-1">
+                <img src="/img/icons/formPhone.png" alt="">
               </div>
-            <button type="button" class="form__button">ЗАКАЗАТЬ ЗВОНОК</button>
+              <input name="phone" id="request_phone" class="col-9" id="phone" placeholder="ВАШ ТЕЛЕФОН" required>
+            </div>
           </form>
+          <button id="send_request" class="form__button">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
       </div>
     </div>
@@ -113,10 +129,20 @@
           </div>
           <h3>С доставкой по России</h3>
           <button class="btn_cl offer__btn" data-toggle="modal" data-target="#offerModal">
-            <img src="/img/icons/pointer.png" alt="указатель" width="45">
+            <img src="/img/icons/pointer.png" alt="указатель" width="45" id="offer">
             оставить заявку
           </button>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec__util">
+    <div class="container">
+      <img src="/img/util.png" alt="">
+      <div class="row justify-content-center">
+        <button class="btn_cl">
+          ЗАКАЗАТЬ УТИЛИЗАЦИЮ
+        </button>
       </div>
     </div>
   </section>
@@ -285,15 +311,49 @@
     </div>
   </section>
   <section class="sec__portfolio">
-    <div class="title">
-      <h1 class="title__text title__text_blue">
-        наши работы
-      </h1>
-    </div>
-    <div class="row justify-content-center">
-      <button class="btn_cl btn_work col-lg-3 col-11" data-toggle="modal" data-target="#offerModal">
-        ЗАКАЗАТЬ РАСЧЕТ
-      </button>
+    <div class="container">
+      <div class="title">
+        <h1 class="title__text title__text_blue">
+          наши работы
+        </h1>
+      </div>
+      <div class="row gallery">
+        <div class="col-4">
+          <div href="/img/portfolio/1.jpg" class="gallery__item" style="background-image: url(/img/portfolio/1.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/2.jpg" class="gallery__item" style="background-image: url(/img/portfolio/2.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/3.jpg" class="gallery__item" style="background-image: url(/img/portfolio/3.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/4.jpg" class="gallery__item" style="background-image: url(/img/portfolio/4.jpg)"
+            data-fancybox="images"></div>
+        </div>
+        <div class="col-4">
+          <div href="/img/portfolio/5.jpg" class="gallery__item" style="background-image: url(/img/portfolio/5.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/6.jpg" class="gallery__item" style="background-image: url(/img/portfolio/6.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/7.jpg" class="gallery__item" style="background-image: url(/img/portfolio/7.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/8.jpg" class="gallery__item" style="background-image: url(/img/portfolio/8.jpg)"
+            data-fancybox="images"></div>
+        </div>
+        <div class="col-4">
+          <div href="/img/portfolio/9.jpg" class="gallery__item" style="background-image: url(/img/portfolio/9.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/10.jpg" class="gallery__item" style="background-image: url(/img/portfolio/10.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/11.jpg" class="gallery__item" style="background-image: url(/img/portfolio/11.jpg)"
+            data-fancybox="images"></div>
+          <div href="/img/portfolio/12.jpg" class="gallery__item" style="background-image: url(/img/portfolio/12.jpg)"
+            data-fancybox="images"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <button class="btn_cl btn_work col-lg-4 col-11" data-toggle="modal" data-target="#offerModal">
+          ЗАКАЗАТЬ РАСЧЕТ
+        </button>
+      </div>
     </div>
   </section>
   <section class="sec__tech">
@@ -389,5 +449,6 @@
   </section>
 
 </body>
+<script src="js/fancybox/jquery.fancybox.min.js"></script>
 
 </html>
