@@ -145,7 +145,7 @@ body {
   color: #c22328;
 }
 
-.kek1 {
+.snippet {
   float: left;
   width: 80px;
   text-align: center;
@@ -174,7 +174,7 @@ body {
 }
 
 .btn_cl:hover {
-  transform: scale(1.02)
+  transform: scale(1.02);
 }
 
 .offer__btn {
@@ -197,17 +197,17 @@ body {
   margin-bottom: 25px;
 }
 
-.type>img {
+.type > img {
   width: 270px;
   margin-bottom: 20px;
 }
 
-.type>h2 {
-  font-family: 'Akrobat-Bold', sans-serif;
+.type > h2 {
+  font-family: "Akrobat-Bold", sans-serif;
 }
 
 .type p {
-  font-family: 'Akrobat-SemiBold', sans-serif;
+  font-family: "Akrobat-SemiBold", sans-serif;
   font-size: 18px;
 }
 
@@ -216,13 +216,13 @@ body {
 }
 
 .price {
-  font-family: 'Akrobat-Bold', sans-serif;
+  font-family: "Akrobat-Bold", sans-serif;
   font-size: 25px;
   font-weight: 900;
 }
 
 .sec__calc {
-  font-family: 'Akrobat-Bold', sans-serif;
+  font-family: "Akrobat-Bold", sans-serif;
   padding: 50px 30px 80px 30px;
   height: auto;
 }
@@ -282,7 +282,7 @@ body {
   color: #5a9ee0;
   font-size: 70px;
   line-height: 1.1;
-  font-family: 'Akrobat-Bold', sans-serif;
+  font-family: "Akrobat-Bold", sans-serif;
 }
 
 .work_origin {
@@ -316,7 +316,7 @@ body {
 }
 
 .adv__item {
-  font-family: 'Akrobat-SemiBold', sans-serif;
+  font-family: "Akrobat-SemiBold", sans-serif;
   text-align: center;
   font-size: 25px;
   font-weight: 600;
@@ -350,11 +350,11 @@ body {
   margin-top: 20px;
 }
 
-.container_min>img:first-child {
+.container_min > img:first-child {
   margin: 50px 0 70px 0;
 }
 
-.container_min>img:nth-child(2) {
+.container_min > img:nth-child(2) {
   margin-bottom: 50px;
 }
 
@@ -363,7 +363,7 @@ body {
 }
 
 .tech__desc {
-  font-size: 1.4rem
+  font-size: 1.4rem;
 }
 
 .desc_accent {
@@ -380,7 +380,7 @@ body {
 .tech_title {
   font-size: 36px;
   margin: 30px 0;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .logo_white {
@@ -491,6 +491,13 @@ body {
   background-size: 150%;
 }
 
+.util__banner {
+  width: 100%;
+}
+
+.util__button {
+  margin: 20px 0;
+}
 
 @media (max-width: 767.98px) {
   section {
@@ -499,14 +506,15 @@ body {
   .container_min img {
     width: 100%;
   }
-  .work__img, .offer__img {
+  .work__img,
+  .offer__img {
     width: 100%;
   }
   .intro__logo {
     margin-bottom: 15px;
   }
   .sec__intro .title {
-    margin-bottom: 40px
+    margin-bottom: 40px;
   }
   .contacts__bottom {
     margin-bottom: 25px;
@@ -526,10 +534,10 @@ body {
   .work_accent {
     font-size: 100px;
   }
-  .type>img {
+  .type > img {
     width: 250px;
   }
-  .type>p {
+  .type > p {
     font-size: 20px;
   }
   .stages_img {
@@ -563,7 +571,7 @@ body {
     padding: 10px;
   }
   .sec__tech .title span {
-    color: #599ee0
+    color: #599ee0;
   }
   .title__text span {
     background: none;
@@ -677,12 +685,13 @@ body {
     font-size: 18px;
     line-height: 1.2;
   }
-  .modal__main-title, .modal__sub-title {
+  .modal__main-title,
+  .modal__sub-title {
     font-size: 25px;
   }
 }
 
-@media (min-width: 768px) and (max-width:991.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .stages_img {
     width: 100%;
   }
